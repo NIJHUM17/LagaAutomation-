@@ -9,13 +9,15 @@ lastname = "Nijhum"
 password = "123Nipu"
 address = "Downey"
 addressLine2 = "Dominant Dream"
+company="Red.Dot"
 city = "South Gate"
 state = "California"
 zip_code = "90280"
 Home_phone = "+12022563030"
 mobile = "+8801629099448"
 
-driver = webdriver.Chrome(executable_path="D:/Python/chromedriver.exe")
+s = Service("D:/Python/chromedriver.exe")
+driver = webdriver.Chrome(service=s)
 
 driver.get("http://automationpractice.com/index.php")
 driver.maximize_window()
@@ -27,25 +29,25 @@ time.sleep(1)
 driver.find_element("id", "email_create").send_keys(email)
 time.sleep(2)
 driver.find_element("xpath", "//button[@id='SubmitCreate']").click()
-time.sleep(1)
+time.sleep(5)
 
 # Registration
 
-#driver.find_element("xpath", "//div[@class=radio]")
-driver.find_element("id", "id_gender2").click()
+driver.find_element("xpath", "//input[@id='id_gender2']").click()
+time.sleep(2)
 
 driver.find_element("id", "customer_firstname").send_keys(firstname)
-time.sleep(1)
+time.sleep(2)
 driver.find_element("id", "customer_lastname").send_keys(lastname)
-time.sleep(1)
+time.sleep(2)
 driver.find_element("id", "passwd").send_keys(password)
-time.sleep(1)
+time.sleep(2)
 driver.find_element("id", "days").send_keys(17)
-time.sleep(1)
+time.sleep(2)
 driver.find_element("id", "months").send_keys("February")
-time.sleep(1)
+time.sleep(2)
 driver.find_element("id", "years").send_keys(2000)
-time.sleep(1)
+time.sleep(2)
 
 driver.find_element("xpath", "//input[@id='newsletter']").click()
 driver.find_element("xpath", "//input[@id='optin']").click()
