@@ -25,4 +25,12 @@ driver.find_element("xpath", "//button[@id='SubmitLogin']").click()
 
 driver.find_element("id", "search_query_top").send_keys("dress")
 driver.find_element("xpath", "//button[@name='submit_search']").click()
-time.sleep(2)
+time.sleep(10)
+
+#Add
+
+driver.find_element("xpath","//a[@class = 'product-name']").click()
+time.sleep(10)
+
+driver.find_element("xpath", "//button[@class ='exclusive added']").click()
+time.sleep(10)
