@@ -32,5 +32,11 @@ time.sleep(10)
 driver.find_element("xpath","//a[@class = 'product-name']").click()
 time.sleep(10)
 
-driver.find_element("xpath", "//button[@class ='exclusive added']").click()
+driver.find_element("xpath", "//button[@class ='exclusive']").click()
 time.sleep(10)
+
+#proceed to checkout
+
+driver.find_element( "xpath", "//a[@class = 'btn btn-default button button-medium']").click()
+time.sleep(10)
+
